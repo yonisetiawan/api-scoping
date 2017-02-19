@@ -9,28 +9,30 @@
     <link rel="stylesheet" href="/css/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
     <link rel="stylesheet" href="/css/stylehome.css">
-    <title>Login</title>
+    <title>Maintain State</title>
 </head>
 
 <body>
 
     <nav id="navigation-bar" class="navbar navbar-default">
         <ul id="navigation-links">
-            <li><a id="logo" href="#">Home</a></li>
-            <li><a id="" href="#">Skills</a></li>
-            <li><a id="" href="#">Meals</a></li>
+            <li><a id="" onclick="pagehome()" href="#">Home</a></li>
+            <li><a id="" onclick="skill()" href="#">Skills</a></li>
+            <li><a id="" onclick="pagemeals()" href="#">Meals</a></li>
 
             <div class="ui icon input">
                 <input type="text" placeholder="Search...">
                 <i class="circular search link icon"></i>
             </div>
-            <li class="navbar-right"><a href="">Sign up</a></li>
-            <li class="navbar-right"><a href="">Login</a></li>
+            <!-- <li class="navbar-right"><a href="">Sign up</a></li>
+            <li class="navbar-right"><a href="">Login</a></li> -->
         </ul>
     </nav>
     <div class="ui center aligned container">
       <h1>Maintain State</h1>
-        <button onclick="dataHeading()" data="Change Data Heading" class="ui teal button">Data-Heading</button>
+        <div id="listbtn" class="">
+          <button onclick="dataHeading()" data="Change Data Heading" class="ui teal button">Data-Heading</button>
+        </div>
     </div>
 
 
