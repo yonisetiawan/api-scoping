@@ -2,8 +2,8 @@ const meals = ["salad","vegans","apples","lemon","grilling","dinners","checken",
 
 var getMeals = {
     choice:function() {
-        var random = Math.floor(Math.random()*9)
-        return meals[random]
+        
+        return meals
     }
 }
 

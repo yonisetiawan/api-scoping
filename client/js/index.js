@@ -26,14 +26,21 @@ function dataURL() {
     }
 }
 
+$(document).ready(function() {
+  $.ajax({
+      url: "http://localhost:3000/meals",
+      type: "GET",
+      success: function(result) {
+          sessionStorage.setItem('meals',result)
+      }, error: function(err) {
+          console.log(err);
+      }
+  })
+})
+
+
 function dataMeals() {
-    $.ajax({
-        url: "http://localhost:3000/meals",
-        type: "GET",
-        success: function(result) {
-          if(result){
-            document.querySelector("div.ui h1").innerHTML = result
-          }
-        }
-    })
+  var meals = sessionStorage.getItem("meals").split(",")
+  var random = Math.floor(Math.random()*9)
+  document.querySelector("div.ui h1").innerHTML = meals[random]
 }
